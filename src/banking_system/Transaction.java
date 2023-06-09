@@ -10,4 +10,8 @@ package banking_system;
  */
 public class Transaction {
     
+    public static void main(String args[]){
+        
+    }
+    
 }
