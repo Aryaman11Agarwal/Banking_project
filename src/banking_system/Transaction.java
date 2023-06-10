@@ -24,10 +24,38 @@ public class Transaction  extends JFrame{
         JLabel image=new JLabel(i3);
         image.setBounds(0,0,900,900);
         add(image);
-        setVisible(true);
-        setLayout(null);
         
+        
+        JLabel text =new JLabel("Please select your Transaction");
+        text.setBounds(240,300,700,35);
+        text.setForeground(Color.white);
+        text.setFont(new Font("system",Font.BOLD,16));
+        image.add(text); 
+        
+        JButton deposit=new JButton("Deposit");
+        deposit.setBounds(170,415,150,30);
+        image.add(deposit);
+        
+        JButton withdrawl=new JButton("Withdraw");
+        withdrawl.setBounds(355,415,150,30);
+        image.add(withdrawl);
+        
+        JButton fastcash=new JButton("FastCash");
+        fastcash.setBounds(170,450,150,30);
+        image.add(fastcash);
+        
+//        JButton deposit=new JButton("Deposit");
+//        deposit.setBounds(170,415,150,30);
+//        image.add(deposit);
+//        
     
+        
+        //setUndecorated(true);
+       
+        setLayout(null);
+         setVisible(true);
+        
+        
     }
     
     public static void main(String args[]){
