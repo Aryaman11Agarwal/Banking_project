@@ -123,7 +123,7 @@ public class Login extends JFrame implements ActionListener{
             String cardnumber=cardField.getText();  
             String pinnumber=pinField.getText();
             
-            String query="Select * from login where card_number= '"+cardnumber+"' and pin= '"+pinnumber+"'";
+            String query="Select * from login where card_number= '"+cardnumber+"' and pin= '"+pinnumber +"'";
             
             try{
            ResultSet rs= con.s.executeQuery(query);

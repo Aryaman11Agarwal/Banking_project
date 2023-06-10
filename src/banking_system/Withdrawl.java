@@ -12,12 +12,12 @@ import java.util.*;
  *
  * @author aryam
  */
-public class Deposit extends JFrame implements ActionListener{
+public class Withdrawl extends JFrame implements ActionListener{
     JTextField amount;
-    JButton deposit,back;
+    JButton withdraw,back;
     String pinnumber;
     
-    Deposit(String pinnumber){
+    Withdrawl(String pinnumber){
         
         this.pinnumber=pinnumber;
         
@@ -30,7 +30,7 @@ public class Deposit extends JFrame implements ActionListener{
         image.setBounds(0,0,900,900);
         add(image);
         
-        JLabel text=new JLabel("Enter the amount you want to depoist");
+        JLabel text=new JLabel("Enter the amount you want to withdraw");
         text.setForeground(Color.white);
          text.setFont(new Font("system",Font.BOLD,16));
          text.setBounds(170,300,400,20);
@@ -41,10 +41,10 @@ public class Deposit extends JFrame implements ActionListener{
         amount.setBounds(170,350,320,25);
         image.add(amount);
         
-        deposit =new JButton("Deposit");
-        deposit.setBounds(355,485,150,30);
-       image.add(deposit); 
-       deposit.addActionListener(this);
+        withdraw =new JButton("Withdraw");
+        withdraw.setBounds(355,485,150,30);
+       image.add(withdraw); 
+       withdraw.addActionListener(this);
        
       
        back =new JButton("Back");
@@ -59,18 +59,18 @@ public class Deposit extends JFrame implements ActionListener{
     }
     
     public void actionPerformed(ActionEvent ae){
-        if(ae.getSource()==deposit){
+        if(ae.getSource()==withdraw){
              String number = amount.getText();
             Date date = new Date();
             
              if(number.equals("")){
-            JOptionPane.showMessageDialog(null, "Please enter the Amount to you want to Deposit");
+            JOptionPane.showMessageDialog(null, "Please enter the Amount to you want to Withdraw");
             }
              else{
                  try{
                   Con con = new Con();
-                    con.s.executeUpdate("insert into bank values('"+pinnumber+"', '"+date+"', 'Deposit', '"+number+"')");
-                    JOptionPane.showMessageDialog(null, "Rs. "+number+" Deposited Successfully");
+                    con.s.executeUpdate("insert into bank values('"+pinnumber+"', '"+date+"', 'Withdrawl', '"+number+"')");
+                    JOptionPane.showMessageDialog(null, "Rs. "+number+" Withdrawn Successfully");
                     setVisible(false);
                     new Transaction(pinnumber).setVisible(true);}
                  catch(Exception e){
@@ -90,8 +90,9 @@ public class Deposit extends JFrame implements ActionListener{
         
     }
     public static void main(String args[]){
-        new Deposit("");
+        new Withdrawl("");
     
     }
     
 }
+
