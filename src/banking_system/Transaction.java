@@ -11,7 +11,7 @@ package banking_system;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Random;
+
 
 public class Transaction  extends JFrame implements ActionListener{
    JButton deposit,withdrawl,fastcash,ministatement,pinchange,balanceEnquiry,exit; 
