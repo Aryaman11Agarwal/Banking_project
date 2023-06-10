@@ -16,7 +16,7 @@ import java.util.Random;
 public class Transaction  extends JFrame implements ActionListener{
    JButton deposit,withdrawl,fastcash,ministatement,pinchange,balanceEnquiry,exit; 
     
-    Transaction(){
+    Transaction(String pinnumber){
        setSize(950,900);
         setLocation(300,0); 
         ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
@@ -104,7 +104,7 @@ public class Transaction  extends JFrame implements ActionListener{
          }
     
     public static void main(String args[]){
-        new Transaction();
+        new Transaction("");
     }
     
 }

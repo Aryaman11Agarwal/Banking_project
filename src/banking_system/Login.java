@@ -11,6 +11,7 @@ package banking_system;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.*;  
 
 
 public class Login extends JFrame implements ActionListener{
@@ -117,6 +118,26 @@ public class Login extends JFrame implements ActionListener{
         
         }
         else if(ae.getSource()==login){
+            
+            Con con =new Con();
+            String cardnumber=cardField.getText();  
+            String pinnumber=pinField.getText();
+            
+            String query="Select * from login where card_number= '"+cardnumber+"' and pin= '"+pinnumber+"'";
+            
+            try{
+           ResultSet rs= con.s.executeQuery(query);
+           if(rs.next()){
+               setVisible(false);
+               new Transaction(pinnumber).setVisible(true);
+               
+           }
+           else{
+               JOptionPane.showMessageDialog(null, "Invalid Card Number or PIN");
+            }}
+            catch(Exception e){
+            System.out.println(e);
+            }
         }
         else if(ae.getSource()==signup){
             setVisible(false);
