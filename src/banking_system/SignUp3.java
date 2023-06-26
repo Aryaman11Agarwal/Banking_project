@@ -235,6 +235,8 @@ String pinNumber=""+(Math.abs((random.nextLong()%9000L))+1000L);
              String query2="insert into login values('"+formno+"','"+cardNumber+"','"+pinNumber+"')";
              con.s.executeUpdate(query2);
               JOptionPane.showMessageDialog(null, "Card Number:\n"+cardNumber+"\nPin: \n"+pinNumber);
+              setVisible(false);
+              new Login().setVisible(true);
          }
     
     }catch(Exception e){
