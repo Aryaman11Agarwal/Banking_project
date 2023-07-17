@@ -92,7 +92,7 @@ public class Transaction  extends JFrame implements ActionListener{
                new Deposit(pinnumber).setVisible(true);}
            
            if(ae.getSource()==withdrawl){
-               setVisible(false);
+              // setVisible(false);
                new Withdrawl(pinnumber).setVisible(true);
                }
            
@@ -112,7 +112,7 @@ public class Transaction  extends JFrame implements ActionListener{
                }
            
            if(ae.getSource()==ministatement){
-               setVisible(false);
+             
                new MiniStatement(pinnumber).setVisible(true);
                }
            

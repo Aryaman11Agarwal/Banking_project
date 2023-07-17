@@ -123,6 +123,6 @@ public class Pin extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args){
-        new Pin("").setVisible(true);
+        new Pin("9008").setVisible(true);
     }
 }

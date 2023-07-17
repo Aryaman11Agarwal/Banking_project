@@ -73,11 +73,12 @@ public class MiniStatement extends JFrame implements ActionListener{
         b1.setBounds(20, 500, 100, 25);
     }
     public void actionPerformed(ActionEvent ae){
-        this.setVisible(false);
+        dispose();
+       
     }
     
     public static void main(String[] args){
-        new MiniStatement("").setVisible(true);
+        new MiniStatement("9609").setVisible(true);
     }
     
 }
