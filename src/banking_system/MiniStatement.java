@@ -20,16 +20,33 @@ public class MiniStatement extends JFrame implements ActionListener{
     MiniStatement(String pin){
       //  super("Mini Statement");
         getContentPane().setBackground(Color.WHITE);
+        
         setSize(400,600);
         setLocation(20,20);
         
         l1 = new JLabel();
-        add(l1);
+     //   l1.set
+       add(l1);
+       
+//       JScrollPane js = new JScrollPane(l1);
+//       js.setPreferredSize(new Dimension(200,200));
+//    add(js);
         
         JLabel l2 = new JLabel("Indian Bank");
         l2.setBounds(150, 20, 100, 20);
         add(l2);
         
+//        JScrollPane scroller = new JScrollPane(l1, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+////        getContentPane().add(scroller);
+        
+
+//   JRootPane s=new JRootPane(); 
+//   
+//    s.setBounds(300,0, 10,200);  
+
+
+
+
         JLabel l3 = new JLabel();
         l3.setBounds(20, 80, 300, 20);
         add(l3);
